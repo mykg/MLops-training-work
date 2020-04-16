@@ -1,0 +1,12 @@
+Feature Selection (Variance Threshold)
+
+Like take an example we have college dataset of students in which college id will remain same for all 
+but suppose we have another college dataset in it
+We actually don't need this college id as it doesn't predict anything so to remove it or not to include it in Feature selection we use VarianceThreashold
+
+
+from sklearn.feature_selection import VarianceThreshold
+model_t = VarianceThreshold(threshold=0.3)  threshold values changes as if there are 30% value changes in college id column we signifies it as 0.3 we value don't change as all throught the column then we put 0.0
+then we
+model_t.fit(dataset) whatever dataset we have
+model_t.get_support() to check the we eliminated that feature or we didn't invloved it
